@@ -10,6 +10,10 @@ class D3Controller < ApplicationController
 
         return result
       end
+
+      format.any(:csv, :json) do
+        send_data File.read("#{params[:figure]}.#{request.format.to_sym}")
+      end
     end
   end
 end
