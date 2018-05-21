@@ -1,0 +1,6 @@
+<div class="list-group">
+  <% @files = Dir.glob("*.html").sort! %>
+  <% @files.each do |f| %>
+    <a href='<%= "/d3/#{f}" %>' class="list-group-item"><%= f %></a>
+  <% end %>
+</div>
