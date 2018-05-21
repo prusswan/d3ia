@@ -17,7 +17,8 @@
         <div class="col-sm-3">
           <%= render 'figure_list' %>
         </div>
-        <div class="col">
+        <div class="col sticky-top" style="height: 600px">
+          <h3><%= params[:figure] %></h3>
           <%= yield %>
         </div>
       </div>
