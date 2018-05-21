@@ -14,6 +14,10 @@ class D3Controller < ApplicationController
       format.any(:csv, :json) do
         send_data File.read("#{params[:figure]}.#{request.format.to_sym}")
       end
+
+      format.js do
+        send_data File.read("#{params[:figure]}.js"), type: 'application/javascript'
+      end
     end
   end
 end
