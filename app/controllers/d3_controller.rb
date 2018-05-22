@@ -2,6 +2,8 @@ class D3Controller < ApplicationController
   prepend_view_path Rails.root
 
   def index
+    @files = Dir.glob("*.html").sort!
+    params[:figure] ||= @files.first.chomp('.html')
 
     respond_to do |format|
       format.html do

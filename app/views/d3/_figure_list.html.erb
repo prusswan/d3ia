@@ -1,4 +1,3 @@
-<% @files = Dir.glob("*.html").sort! %>
 <% @file_groups = @files.group_by { |f| f.split("_")[1] } %>
 
 <% @file_groups.each do |c, files| %>
